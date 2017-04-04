@@ -94,7 +94,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="react\col1Elem.js" />
+    <Content Include="react\completeItem.js" />
     <Content Include="react\entry.js" />
+    <Content Include="react\toDoItem.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="sass\entry.scss" />
