@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDom = require('react-dom');
 
-var CompleteItem = require('./CompleteItem');
+var ToDoTable = require('./ToDoTable');
 
-ReactDom.render(<CompleteItem />, document.getElementById("todo-table"));
+ReactDom.render(<ToDoTable />, document.getElementById("todo-table"));

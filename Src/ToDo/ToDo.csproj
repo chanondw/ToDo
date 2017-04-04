@@ -98,6 +98,7 @@
     <Content Include="react\completeItem.js" />
     <Content Include="react\entry.js" />
     <Content Include="react\toDoItem.js" />
+    <Content Include="react\toDoTable.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="sass\entry.scss" />

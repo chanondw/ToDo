@@ -1,12 +1,33 @@
+.todo-header h2 {
+  display: inline-block; }
+
+.todo-header button {
+  float: right;
+  margin: 20px 0 10px 0; }
+
+.todo-body {
+  background-color: white; }
+  .todo-body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
 .todo-row {
   display: flex;
   border: 1px solid black; }
 
 .todo-col-1 {
   flex: 1; }
+  .todo-col-1.border {
+    border: 1px solid black; }
+  .todo-col-1 input {
+    margin: 10px; }
 
 .todo-col-2 {
   flex: 28; }
 
 .todo .text-description {
   margin-left: 5px; }
+
+.clearboth {
+  clear: both; }

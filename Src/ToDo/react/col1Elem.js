@@ -1,11 +1,14 @@
 ﻿var React = require('react');
 
 class Col1Elem extends React.Component {
+    constructor(){
+        super();
+    }
     render() {
-        if (this.props.checkbox === "true") {
-            return (<input type="checkbox" style="margin: 10px"/>);
+        if (this.props.checkbox) {
+            return (<input type="checkbox" checked={this.props.checked} onChange={this.props.onChecked} ref={this.props.taskId} />);
         } else {
-            return (<span>1</span>);
+            return (<span>{this.props.amount}</span>);
         }
     }
 }
