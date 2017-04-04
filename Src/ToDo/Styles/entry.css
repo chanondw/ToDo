@@ -1,0 +1,12 @@
+.todo-row {
+  display: flex;
+  border: 1px solid black; }
+
+.todo-col-1 {
+  flex: 1; }
+
+.todo-col-2 {
+  flex: 28; }
+
+.todo .text-description {
+  margin-left: 5px; }
