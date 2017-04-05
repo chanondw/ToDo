@@ -20,11 +20,20 @@
   flex: 1; }
   .todo-col-1.border {
     border: 1px solid black; }
+  .todo-col-1 span {
+    margin: 0 10px 0 10px; }
   .todo-col-1 input {
     margin: 10px; }
 
 .todo-col-2 {
-  flex: 28; }
+  flex: 28;
+  margin-top: auto;
+  margin-bottom: auto; }
+  .todo-col-2 span, .todo-col-2 input, .todo-col-2 i {
+    margin-left: 10px;
+    display: inline-block; }
+  .todo-col-2 .strike {
+    text-decoration: line-through; }
 
 .todo .text-description {
   margin-left: 5px; }

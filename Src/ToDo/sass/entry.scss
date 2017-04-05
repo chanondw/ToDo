@@ -27,6 +27,9 @@
 		&.border {
 			border: 1px solid black;
 		}
+        span {
+            margin: 0 10px 0 10px;
+        }
 		input {
 			margin: 10px;
 		}
@@ -34,6 +37,15 @@
 
     &-col-2 {
         flex: 28;
+        margin-top: auto;
+        margin-bottom: auto;
+        span, input, i {
+            margin-left: 10px;
+            display: inline-block;
+        }
+        .strike {
+            text-decoration: line-through;
+        }
     }
 
     .text-description {

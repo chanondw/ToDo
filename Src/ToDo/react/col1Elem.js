@@ -6,7 +6,7 @@ class Col1Elem extends React.Component {
     }
     render() {
         if (this.props.checkbox) {
-            return (<input type="checkbox" checked={this.props.checked} onChange={this.props.onChecked} ref={this.props.taskId} />);
+            return (<input type="checkbox" checked={this.props.checked} onChange={this.props.onChecked} />);
         } else {
             return (<span>{this.props.amount}</span>);
         }
