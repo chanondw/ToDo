@@ -4,8 +4,10 @@ var ToDoItem = require('./ToDoItem');
 
 class ToDoTable extends React.Component {
     getListFromStorage() {
+        var retreivedItem = localStorage.getItem("todo");
+        if (typeof retreivedItem !== undefined && retreivedItem !== "")
         var storedItem = JSON.parse(localStorage.getItem("todo"));
-        if (storedItem && typeof storedItem !== undefined)
+        if (storedItem && typeof storedItem !== undefined && storedItem !== "")
             this.state = storedItem;
     }
     constructor() {
@@ -22,7 +24,7 @@ class ToDoTable extends React.Component {
     onAddTodo(evt) {
         var todo = this.state.todo;
         var taskId = todo.length > 0 ? todo[todo.length - 1].taskId + 1 : 0;
-        todo.push({taskId: taskId, isChecked: false, description: "" , showInput: true});
+        todo.push({taskId: taskId, isChecked: false, title: "", description: "", showInput: true, date: new Date()});
         this.setState({
             todo: todo
         });
@@ -35,12 +37,14 @@ class ToDoTable extends React.Component {
                 this.state.todo[i] = {
                     taskId: newTodo.taskId,
                     isChecked: newTodo.checked,
-                    description: newTodo.description,
-                    showInput: false
+                    title: newTodo.title,
+                    showInput: false,
+                    date: newTodo.date,
+                    description: newTodo.description
                 };
             }
             if (this.state.todo[i].isChecked) {
-                complete.push({description: this.state.todo[i].description});
+                complete.push({title: this.state.todo[i].title, description: this.state.todo[i].description});
             }
         }
         this.setState({
@@ -60,7 +64,7 @@ class ToDoTable extends React.Component {
                 index = i;
             }
             if (this.state.todo[i].isChecked && index !== i) {
-                complete.push({description: this.state.todo[i].description});
+                complete.push({title: this.state.todo[i].title, description: this.state.todo[i].description});
             }
         }
         var todo = this.state.todo;
@@ -82,7 +86,8 @@ class ToDoTable extends React.Component {
         }
         if (this.state.todo.length > 0) {
             for(var i = 0; i < this.state.todo.length; i++) {
-                todo.push(<ToDoItem key={this.state.todo[i].taskId} isCheckbox={true} checked={this.state.todo[i].isChecked} description={this.state.todo[i].description} taskId={this.state.todo[i].taskId} onTextChanged={this.onTextChanged} onChanged={this.onItemChanged} showInput={this.state.todo[i].showInput} onDelete={this.onItemDelete} />);
+                todo.push(<ToDoItem key={this.state.todo[i].taskId} isCheckbox={true} checked={this.state.todo[i].isChecked} title={this.state.todo[i].title} description={this.state.todo[i].description}
+            taskId={this.state.todo[i].taskId} date={this.state.todo[i].date} onTextChanged={this.onTextChanged} onChanged={this.onItemChanged} showInput={this.state.todo[i].showInput} onDelete={this.onItemDelete} />);
             }
         }
         return (

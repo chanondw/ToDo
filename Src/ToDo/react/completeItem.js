@@ -6,7 +6,7 @@ class CompleteItem extends React.Component {
         super();
     }
     render() {
-        return (<ToDoItem description="Completed" isCheckbox={false} amount={this.props.amount} showInput={false} />);
+        return (<ToDoItem title="Completed" isCheckbox={false} amount={this.props.amount} showInput={false} />);
         }
 }
 

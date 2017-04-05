@@ -32,10 +32,17 @@
   .todo-col-2 span, .todo-col-2 input, .todo-col-2 i {
     margin-left: 10px;
     display: inline-block; }
+  .todo-col-2 textarea {
+    margin-left: 10px;
+    margin-bottom: 10px; }
+  .todo-col-2 label {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: normal; }
   .todo-col-2 .strike {
     text-decoration: line-through; }
 
-.todo .text-description {
+.todo .text-title {
   margin-left: 5px; }
 
 .clearboth {
