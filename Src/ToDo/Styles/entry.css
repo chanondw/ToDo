@@ -38,7 +38,8 @@
   .todo-col-2 label {
     margin-left: 10px;
     font-size: 20px;
-    font-weight: normal; }
+    font-weight: normal;
+    display: block; }
   .todo-col-2 .strike {
     text-decoration: line-through; }
 
